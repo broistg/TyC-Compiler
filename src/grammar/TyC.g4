@@ -33,28 +33,71 @@ program: (structDecl | funcDecl)+ EOF;
 structDecl: STRUCT ID LB memberDecl* RB SEMI;
 memberDecl: explicitType ID SEMI;
 
-funcDecl: returnType? ID LP paramList? RP blockStmt;
+funcDecl: returnType? ID LP paramList? RP block;
 paramList: param (COMMA param)*;
 param: explicitType ID;
-blockStmt: LB stmt* RB;
 
 // Statements
 stmt:
-	ifStmt			# ifStmt
-	| forStmt		# forStmt
-	| whileStmt		# whileStmt
-	| switchStmt	# switchStmt
-	| breakStmt		# breakStmt
-	| continueStmt	# continueStmt
-	| returnStmt	# returnStmt
-	| blockStmt		# blockStmt
-	| varDeclStmt	# varDeclStmt
-	| exprStmt		# exprStmt;
+	IF LP expr RP stmt (ELSE stmt)?				# IfStmt
+	| WHILE LP expr RP stmt						# WhileStmt
+	| FOR LP forInit expr? SEMI expr? RP stmt	# ForStmt
+	| SWITCH LP expr RP LB switchCase* RB		# SwitchStmt
+	| BREAK SEMI								# BreakStmt
+	| CONTINUE SEMI								# ContinueStmt
+	| RETURN expr? SEMI							# ReturnStmt
+	| block										# BlockStmt
+	| varDecl									# VarDeclStmt
+	| expr SEMI									# ExprStmt;
 
-varDeclStmt: varType ID (ASSIGN expr)? SEMI;
+block: LB stmt* RB; // Block helper
+varDecl: varType ID (ASSIGN expr)? SEMI; // Variable declaration
+forInit: varDecl | expr? SEMI; // Helper for for statement
+switchCase: (CASE expr COLON | DEFAULT COLON)+ stmt*; // Switch cases
 
 // Expressions
-expr: 'expr'; // Placeholder for expression rules
+expr:
+	// Level 1: Primary Expressions (Highest Priority)
+	ID LP exprList? RP	# FuncCall
+	| LB exprList? RB	# StructLiteral
+	| ID				# IdExpr
+	| INTLIT			# IntLitExpr
+	| FLOATLIT			# FloatLitExpr
+	| STRLIT			# StringLitExpr
+	| LP expr RP		# ParentExpr
+
+	// Level 2: Member Access (Left Associative)
+	| expr DOT ID # MemberAccess
+
+	// Level 3: Postfix Operators (Left Associative)
+	| expr (INCR | DECR) # PostfixExpr
+
+	// Level 4: Unary/Prefix Operators (Right Associative)
+	| (NOT | SUB | ADD | INCR | DECR) expr # UnaryExpr
+
+	// Level 5: Multiplicative (Left Associative)
+	| expr (MUL | DIV | MOD) expr # BinaryOp
+
+	// Level 6: Additive (Left Associative)
+	| expr (ADD | SUB) expr # BinaryOp
+
+	// Level 7: Relational (Left Associative)
+	| expr (LT | LEQ | GT | GEQ) expr # BinaryOp
+
+	// Level 8: Equality (Left Associative)
+	| expr (EQ | NEQ) expr # BinaryOp
+
+	// Level 9: Logical AND (Left Associative)
+	| expr AND expr # BinaryOp
+
+	// Level 10: Logical OR (Left Associative)
+	| expr OR expr # BinaryOp
+
+	// Level 11: Assignment (Right Associative)
+	| <assoc = right> expr ASSIGN expr # AssignExpr;
+
+exprList:
+	expr (COMMA expr)*; // Helper for function calls and struct literals
 
 // Primitive Types
 explicitType: INT | FLOAT | STRING | ID;
