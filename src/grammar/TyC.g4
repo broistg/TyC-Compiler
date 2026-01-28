@@ -24,7 +24,7 @@ options{
 	language = Python3;
 }
 
-// -- PARSER RULES --
+// --- PARSER RULES ---
 
 // Program Structure
 program: (structDecl | funcDecl)+ EOF;
@@ -72,28 +72,31 @@ expr:
 	// Level 3: Postfix Operators (Left Associative)
 	| expr (INCR | DECR) # PostfixExpr
 
-	// Level 4: Unary/Prefix Operators (Right Associative)
-	| (NOT | SUB | ADD | INCR | DECR) expr # UnaryExpr
+	// Level 4: Prefix Operators (Right Associative)
+	| (INCR | DECR) expr # PrefixExpr
 
-	// Level 5: Multiplicative (Left Associative)
+	// Level 5: Unary Operators (Right Associative)
+	| (NOT | SUB | ADD) expr # UnaryExpr
+
+	// Level 6: Multiplicative (Left Associative)
 	| expr (MUL | DIV | MOD) expr # BinaryOp
 
-	// Level 6: Additive (Left Associative)
+	// Level 7: Additive (Left Associative)
 	| expr (ADD | SUB) expr # BinaryOp
 
-	// Level 7: Relational (Left Associative)
+	// Level 8: Relational (Left Associative)
 	| expr (LT | LEQ | GT | GEQ) expr # BinaryOp
 
-	// Level 8: Equality (Left Associative)
+	// Level 9: Equality (Left Associative)
 	| expr (EQ | NEQ) expr # BinaryOp
 
-	// Level 9: Logical AND (Left Associative)
+	// Level 10: Logical AND (Left Associative)
 	| expr AND expr # BinaryOp
 
-	// Level 10: Logical OR (Left Associative)
+	// Level 11: Logical OR (Left Associative)
 	| expr OR expr # BinaryOp
 
-	// Level 11: Assignment (Right Associative)
+	// Level 12: Assignment (Right Associative)
 	| <assoc = right> expr ASSIGN expr # AssignExpr;
 
 exprList:
@@ -104,7 +107,7 @@ explicitType: INT | FLOAT | STRING | ID;
 returnType: VOID | explicitType;
 varType: AUTO | explicitType;
 
-// -- LEXER RULES -- 
+// --- LEXER RULES ---
 
 // Keywords
 AUTO: 'auto';
@@ -165,7 +168,7 @@ STRLIT: '"' StrChar* '"' {self.text = self.text[1:-1]};
 // Identifiers
 ID: [a-zA-Z_] [a-zA-Z0-9_]*;
 
-// Skip rules (block before line comments)
+// Skip rules (match block comments before line comments)
 BLOCK_COMMENT: '/*' .*? '*/' -> skip;
 LINE_COMMENT: '//' ~[\r\n]* -> skip;
 WS: [ \t\f\r\n]+ -> skip; // skip whitespaces

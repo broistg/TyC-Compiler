@@ -10,7 +10,7 @@ else:
 
 def serializedATN():
     return [
-        4,1,51,249,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,7,
+        4,1,51,251,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,7,
         6,2,7,7,7,2,8,7,8,2,9,7,9,2,10,7,10,2,11,7,11,2,12,7,12,2,13,7,13,
         2,14,7,14,2,15,7,15,1,0,1,0,4,0,35,8,0,11,0,12,0,36,1,0,1,0,1,1,
         1,1,1,1,1,1,5,1,45,8,1,10,1,12,1,48,9,1,1,1,1,1,1,1,1,2,1,2,1,2,
@@ -24,84 +24,85 @@ def serializedATN():
         3,9,155,8,9,1,9,3,9,158,8,9,1,10,1,10,1,10,1,10,1,10,1,10,4,10,166,
         8,10,11,10,12,10,167,1,10,5,10,171,8,10,10,10,12,10,174,9,10,1,11,
         1,11,1,11,1,11,3,11,180,8,11,1,11,1,11,1,11,3,11,185,8,11,1,11,1,
-        11,1,11,1,11,1,11,1,11,1,11,1,11,1,11,1,11,1,11,3,11,198,8,11,1,
-        11,1,11,1,11,1,11,1,11,1,11,1,11,1,11,1,11,1,11,1,11,1,11,1,11,1,
-        11,1,11,1,11,1,11,1,11,1,11,1,11,1,11,1,11,1,11,1,11,1,11,1,11,5,
-        11,226,8,11,10,11,12,11,229,9,11,1,12,1,12,1,12,5,12,234,8,12,10,
-        12,12,12,237,9,12,1,13,1,13,1,14,1,14,3,14,243,8,14,1,15,1,15,3,
-        15,247,8,15,1,15,0,1,22,16,0,2,4,6,8,10,12,14,16,18,20,22,24,26,
-        28,30,0,7,2,0,23,26,32,32,1,0,27,29,1,0,25,26,2,0,19,20,30,31,1,
-        0,17,18,1,0,23,24,4,0,7,7,10,10,12,12,45,45,280,0,34,1,0,0,0,2,40,
-        1,0,0,0,4,52,1,0,0,0,6,57,1,0,0,0,8,67,1,0,0,0,10,75,1,0,0,0,12,
-        133,1,0,0,0,14,135,1,0,0,0,16,144,1,0,0,0,18,157,1,0,0,0,20,165,
-        1,0,0,0,22,197,1,0,0,0,24,230,1,0,0,0,26,238,1,0,0,0,28,242,1,0,
-        0,0,30,246,1,0,0,0,32,35,3,2,1,0,33,35,3,6,3,0,34,32,1,0,0,0,34,
-        33,1,0,0,0,35,36,1,0,0,0,36,34,1,0,0,0,36,37,1,0,0,0,37,38,1,0,0,
-        0,38,39,5,0,0,1,39,1,1,0,0,0,40,41,5,13,0,0,41,42,5,45,0,0,42,46,
-        5,35,0,0,43,45,3,4,2,0,44,43,1,0,0,0,45,48,1,0,0,0,46,44,1,0,0,0,
-        46,47,1,0,0,0,47,49,1,0,0,0,48,46,1,0,0,0,49,50,5,36,0,0,50,51,5,
-        39,0,0,51,3,1,0,0,0,52,53,3,26,13,0,53,54,5,45,0,0,54,55,5,39,0,
-        0,55,5,1,0,0,0,56,58,3,28,14,0,57,56,1,0,0,0,57,58,1,0,0,0,58,59,
-        1,0,0,0,59,60,5,45,0,0,60,62,5,37,0,0,61,63,3,8,4,0,62,61,1,0,0,
-        0,62,63,1,0,0,0,63,64,1,0,0,0,64,65,5,38,0,0,65,66,3,14,7,0,66,7,
-        1,0,0,0,67,72,3,10,5,0,68,69,5,40,0,0,69,71,3,10,5,0,70,68,1,0,0,
-        0,71,74,1,0,0,0,72,70,1,0,0,0,72,73,1,0,0,0,73,9,1,0,0,0,74,72,1,
-        0,0,0,75,76,3,26,13,0,76,77,5,45,0,0,77,11,1,0,0,0,78,79,5,9,0,0,
-        79,80,5,37,0,0,80,81,3,22,11,0,81,82,5,38,0,0,82,85,3,12,6,0,83,
-        84,5,6,0,0,84,86,3,12,6,0,85,83,1,0,0,0,85,86,1,0,0,0,86,134,1,0,
-        0,0,87,88,5,16,0,0,88,89,5,37,0,0,89,90,3,22,11,0,90,91,5,38,0,0,
-        91,92,3,12,6,0,92,134,1,0,0,0,93,94,5,8,0,0,94,95,5,37,0,0,95,97,
-        3,18,9,0,96,98,3,22,11,0,97,96,1,0,0,0,97,98,1,0,0,0,98,99,1,0,0,
-        0,99,101,5,39,0,0,100,102,3,22,11,0,101,100,1,0,0,0,101,102,1,0,
-        0,0,102,103,1,0,0,0,103,104,5,38,0,0,104,105,3,12,6,0,105,134,1,
-        0,0,0,106,107,5,14,0,0,107,108,5,37,0,0,108,109,3,22,11,0,109,110,
-        5,38,0,0,110,114,5,35,0,0,111,113,3,20,10,0,112,111,1,0,0,0,113,
-        116,1,0,0,0,114,112,1,0,0,0,114,115,1,0,0,0,115,117,1,0,0,0,116,
-        114,1,0,0,0,117,118,5,36,0,0,118,134,1,0,0,0,119,120,5,2,0,0,120,
-        134,5,39,0,0,121,122,5,4,0,0,122,134,5,39,0,0,123,125,5,11,0,0,124,
-        126,3,22,11,0,125,124,1,0,0,0,125,126,1,0,0,0,126,127,1,0,0,0,127,
-        134,5,39,0,0,128,134,3,14,7,0,129,134,3,16,8,0,130,131,3,22,11,0,
-        131,132,5,39,0,0,132,134,1,0,0,0,133,78,1,0,0,0,133,87,1,0,0,0,133,
-        93,1,0,0,0,133,106,1,0,0,0,133,119,1,0,0,0,133,121,1,0,0,0,133,123,
-        1,0,0,0,133,128,1,0,0,0,133,129,1,0,0,0,133,130,1,0,0,0,134,13,1,
-        0,0,0,135,139,5,35,0,0,136,138,3,12,6,0,137,136,1,0,0,0,138,141,
-        1,0,0,0,139,137,1,0,0,0,139,140,1,0,0,0,140,142,1,0,0,0,141,139,
-        1,0,0,0,142,143,5,36,0,0,143,15,1,0,0,0,144,145,3,30,15,0,145,148,
-        5,45,0,0,146,147,5,33,0,0,147,149,3,22,11,0,148,146,1,0,0,0,148,
-        149,1,0,0,0,149,150,1,0,0,0,150,151,5,39,0,0,151,17,1,0,0,0,152,
-        158,3,16,8,0,153,155,3,22,11,0,154,153,1,0,0,0,154,155,1,0,0,0,155,
-        156,1,0,0,0,156,158,5,39,0,0,157,152,1,0,0,0,157,154,1,0,0,0,158,
-        19,1,0,0,0,159,160,5,3,0,0,160,161,3,22,11,0,161,162,5,41,0,0,162,
-        166,1,0,0,0,163,164,5,5,0,0,164,166,5,41,0,0,165,159,1,0,0,0,165,
-        163,1,0,0,0,166,167,1,0,0,0,167,165,1,0,0,0,167,168,1,0,0,0,168,
-        172,1,0,0,0,169,171,3,12,6,0,170,169,1,0,0,0,171,174,1,0,0,0,172,
-        170,1,0,0,0,172,173,1,0,0,0,173,21,1,0,0,0,174,172,1,0,0,0,175,176,
-        6,11,-1,0,176,177,5,45,0,0,177,179,5,37,0,0,178,180,3,24,12,0,179,
-        178,1,0,0,0,179,180,1,0,0,0,180,181,1,0,0,0,181,198,5,38,0,0,182,
-        184,5,35,0,0,183,185,3,24,12,0,184,183,1,0,0,0,184,185,1,0,0,0,185,
-        186,1,0,0,0,186,198,5,36,0,0,187,198,5,45,0,0,188,198,5,43,0,0,189,
-        198,5,42,0,0,190,198,5,44,0,0,191,192,5,37,0,0,192,193,3,22,11,0,
-        193,194,5,38,0,0,194,198,1,0,0,0,195,196,7,0,0,0,196,198,3,22,11,
-        8,197,175,1,0,0,0,197,182,1,0,0,0,197,187,1,0,0,0,197,188,1,0,0,
-        0,197,189,1,0,0,0,197,190,1,0,0,0,197,191,1,0,0,0,197,195,1,0,0,
-        0,198,227,1,0,0,0,199,200,10,7,0,0,200,201,7,1,0,0,201,226,3,22,
-        11,8,202,203,10,6,0,0,203,204,7,2,0,0,204,226,3,22,11,7,205,206,
-        10,5,0,0,206,207,7,3,0,0,207,226,3,22,11,6,208,209,10,4,0,0,209,
-        210,7,4,0,0,210,226,3,22,11,5,211,212,10,3,0,0,212,213,5,21,0,0,
-        213,226,3,22,11,4,214,215,10,2,0,0,215,216,5,22,0,0,216,226,3,22,
-        11,3,217,218,10,1,0,0,218,219,5,33,0,0,219,226,3,22,11,1,220,221,
-        10,10,0,0,221,222,5,34,0,0,222,226,5,45,0,0,223,224,10,9,0,0,224,
-        226,7,5,0,0,225,199,1,0,0,0,225,202,1,0,0,0,225,205,1,0,0,0,225,
-        208,1,0,0,0,225,211,1,0,0,0,225,214,1,0,0,0,225,217,1,0,0,0,225,
-        220,1,0,0,0,225,223,1,0,0,0,226,229,1,0,0,0,227,225,1,0,0,0,227,
-        228,1,0,0,0,228,23,1,0,0,0,229,227,1,0,0,0,230,235,3,22,11,0,231,
-        232,5,40,0,0,232,234,3,22,11,0,233,231,1,0,0,0,234,237,1,0,0,0,235,
-        233,1,0,0,0,235,236,1,0,0,0,236,25,1,0,0,0,237,235,1,0,0,0,238,239,
-        7,6,0,0,239,27,1,0,0,0,240,243,5,15,0,0,241,243,3,26,13,0,242,240,
-        1,0,0,0,242,241,1,0,0,0,243,29,1,0,0,0,244,247,5,1,0,0,245,247,3,
-        26,13,0,246,244,1,0,0,0,246,245,1,0,0,0,247,31,1,0,0,0,27,34,36,
+        11,1,11,1,11,1,11,1,11,1,11,1,11,1,11,1,11,1,11,1,11,1,11,3,11,200,
+        8,11,1,11,1,11,1,11,1,11,1,11,1,11,1,11,1,11,1,11,1,11,1,11,1,11,
+        1,11,1,11,1,11,1,11,1,11,1,11,1,11,1,11,1,11,1,11,1,11,1,11,1,11,
+        1,11,5,11,228,8,11,10,11,12,11,231,9,11,1,12,1,12,1,12,5,12,236,
+        8,12,10,12,12,12,239,9,12,1,13,1,13,1,14,1,14,3,14,245,8,14,1,15,
+        1,15,3,15,249,8,15,1,15,0,1,22,16,0,2,4,6,8,10,12,14,16,18,20,22,
+        24,26,28,30,0,7,1,0,23,24,2,0,25,26,32,32,1,0,27,29,1,0,25,26,2,
+        0,19,20,30,31,1,0,17,18,4,0,7,7,10,10,12,12,45,45,283,0,34,1,0,0,
+        0,2,40,1,0,0,0,4,52,1,0,0,0,6,57,1,0,0,0,8,67,1,0,0,0,10,75,1,0,
+        0,0,12,133,1,0,0,0,14,135,1,0,0,0,16,144,1,0,0,0,18,157,1,0,0,0,
+        20,165,1,0,0,0,22,199,1,0,0,0,24,232,1,0,0,0,26,240,1,0,0,0,28,244,
+        1,0,0,0,30,248,1,0,0,0,32,35,3,2,1,0,33,35,3,6,3,0,34,32,1,0,0,0,
+        34,33,1,0,0,0,35,36,1,0,0,0,36,34,1,0,0,0,36,37,1,0,0,0,37,38,1,
+        0,0,0,38,39,5,0,0,1,39,1,1,0,0,0,40,41,5,13,0,0,41,42,5,45,0,0,42,
+        46,5,35,0,0,43,45,3,4,2,0,44,43,1,0,0,0,45,48,1,0,0,0,46,44,1,0,
+        0,0,46,47,1,0,0,0,47,49,1,0,0,0,48,46,1,0,0,0,49,50,5,36,0,0,50,
+        51,5,39,0,0,51,3,1,0,0,0,52,53,3,26,13,0,53,54,5,45,0,0,54,55,5,
+        39,0,0,55,5,1,0,0,0,56,58,3,28,14,0,57,56,1,0,0,0,57,58,1,0,0,0,
+        58,59,1,0,0,0,59,60,5,45,0,0,60,62,5,37,0,0,61,63,3,8,4,0,62,61,
+        1,0,0,0,62,63,1,0,0,0,63,64,1,0,0,0,64,65,5,38,0,0,65,66,3,14,7,
+        0,66,7,1,0,0,0,67,72,3,10,5,0,68,69,5,40,0,0,69,71,3,10,5,0,70,68,
+        1,0,0,0,71,74,1,0,0,0,72,70,1,0,0,0,72,73,1,0,0,0,73,9,1,0,0,0,74,
+        72,1,0,0,0,75,76,3,26,13,0,76,77,5,45,0,0,77,11,1,0,0,0,78,79,5,
+        9,0,0,79,80,5,37,0,0,80,81,3,22,11,0,81,82,5,38,0,0,82,85,3,12,6,
+        0,83,84,5,6,0,0,84,86,3,12,6,0,85,83,1,0,0,0,85,86,1,0,0,0,86,134,
+        1,0,0,0,87,88,5,16,0,0,88,89,5,37,0,0,89,90,3,22,11,0,90,91,5,38,
+        0,0,91,92,3,12,6,0,92,134,1,0,0,0,93,94,5,8,0,0,94,95,5,37,0,0,95,
+        97,3,18,9,0,96,98,3,22,11,0,97,96,1,0,0,0,97,98,1,0,0,0,98,99,1,
+        0,0,0,99,101,5,39,0,0,100,102,3,22,11,0,101,100,1,0,0,0,101,102,
+        1,0,0,0,102,103,1,0,0,0,103,104,5,38,0,0,104,105,3,12,6,0,105,134,
+        1,0,0,0,106,107,5,14,0,0,107,108,5,37,0,0,108,109,3,22,11,0,109,
+        110,5,38,0,0,110,114,5,35,0,0,111,113,3,20,10,0,112,111,1,0,0,0,
+        113,116,1,0,0,0,114,112,1,0,0,0,114,115,1,0,0,0,115,117,1,0,0,0,
+        116,114,1,0,0,0,117,118,5,36,0,0,118,134,1,0,0,0,119,120,5,2,0,0,
+        120,134,5,39,0,0,121,122,5,4,0,0,122,134,5,39,0,0,123,125,5,11,0,
+        0,124,126,3,22,11,0,125,124,1,0,0,0,125,126,1,0,0,0,126,127,1,0,
+        0,0,127,134,5,39,0,0,128,134,3,14,7,0,129,134,3,16,8,0,130,131,3,
+        22,11,0,131,132,5,39,0,0,132,134,1,0,0,0,133,78,1,0,0,0,133,87,1,
+        0,0,0,133,93,1,0,0,0,133,106,1,0,0,0,133,119,1,0,0,0,133,121,1,0,
+        0,0,133,123,1,0,0,0,133,128,1,0,0,0,133,129,1,0,0,0,133,130,1,0,
+        0,0,134,13,1,0,0,0,135,139,5,35,0,0,136,138,3,12,6,0,137,136,1,0,
+        0,0,138,141,1,0,0,0,139,137,1,0,0,0,139,140,1,0,0,0,140,142,1,0,
+        0,0,141,139,1,0,0,0,142,143,5,36,0,0,143,15,1,0,0,0,144,145,3,30,
+        15,0,145,148,5,45,0,0,146,147,5,33,0,0,147,149,3,22,11,0,148,146,
+        1,0,0,0,148,149,1,0,0,0,149,150,1,0,0,0,150,151,5,39,0,0,151,17,
+        1,0,0,0,152,158,3,16,8,0,153,155,3,22,11,0,154,153,1,0,0,0,154,155,
+        1,0,0,0,155,156,1,0,0,0,156,158,5,39,0,0,157,152,1,0,0,0,157,154,
+        1,0,0,0,158,19,1,0,0,0,159,160,5,3,0,0,160,161,3,22,11,0,161,162,
+        5,41,0,0,162,166,1,0,0,0,163,164,5,5,0,0,164,166,5,41,0,0,165,159,
+        1,0,0,0,165,163,1,0,0,0,166,167,1,0,0,0,167,165,1,0,0,0,167,168,
+        1,0,0,0,168,172,1,0,0,0,169,171,3,12,6,0,170,169,1,0,0,0,171,174,
+        1,0,0,0,172,170,1,0,0,0,172,173,1,0,0,0,173,21,1,0,0,0,174,172,1,
+        0,0,0,175,176,6,11,-1,0,176,177,5,45,0,0,177,179,5,37,0,0,178,180,
+        3,24,12,0,179,178,1,0,0,0,179,180,1,0,0,0,180,181,1,0,0,0,181,200,
+        5,38,0,0,182,184,5,35,0,0,183,185,3,24,12,0,184,183,1,0,0,0,184,
+        185,1,0,0,0,185,186,1,0,0,0,186,200,5,36,0,0,187,200,5,45,0,0,188,
+        200,5,43,0,0,189,200,5,42,0,0,190,200,5,44,0,0,191,192,5,37,0,0,
+        192,193,3,22,11,0,193,194,5,38,0,0,194,200,1,0,0,0,195,196,7,0,0,
+        0,196,200,3,22,11,9,197,198,7,1,0,0,198,200,3,22,11,8,199,175,1,
+        0,0,0,199,182,1,0,0,0,199,187,1,0,0,0,199,188,1,0,0,0,199,189,1,
+        0,0,0,199,190,1,0,0,0,199,191,1,0,0,0,199,195,1,0,0,0,199,197,1,
+        0,0,0,200,229,1,0,0,0,201,202,10,7,0,0,202,203,7,2,0,0,203,228,3,
+        22,11,8,204,205,10,6,0,0,205,206,7,3,0,0,206,228,3,22,11,7,207,208,
+        10,5,0,0,208,209,7,4,0,0,209,228,3,22,11,6,210,211,10,4,0,0,211,
+        212,7,5,0,0,212,228,3,22,11,5,213,214,10,3,0,0,214,215,5,21,0,0,
+        215,228,3,22,11,4,216,217,10,2,0,0,217,218,5,22,0,0,218,228,3,22,
+        11,3,219,220,10,1,0,0,220,221,5,33,0,0,221,228,3,22,11,1,222,223,
+        10,11,0,0,223,224,5,34,0,0,224,228,5,45,0,0,225,226,10,10,0,0,226,
+        228,7,0,0,0,227,201,1,0,0,0,227,204,1,0,0,0,227,207,1,0,0,0,227,
+        210,1,0,0,0,227,213,1,0,0,0,227,216,1,0,0,0,227,219,1,0,0,0,227,
+        222,1,0,0,0,227,225,1,0,0,0,228,231,1,0,0,0,229,227,1,0,0,0,229,
+        230,1,0,0,0,230,23,1,0,0,0,231,229,1,0,0,0,232,237,3,22,11,0,233,
+        234,5,40,0,0,234,236,3,22,11,0,235,233,1,0,0,0,236,239,1,0,0,0,237,
+        235,1,0,0,0,237,238,1,0,0,0,238,25,1,0,0,0,239,237,1,0,0,0,240,241,
+        7,6,0,0,241,27,1,0,0,0,242,245,5,15,0,0,243,245,3,26,13,0,244,242,
+        1,0,0,0,244,243,1,0,0,0,245,29,1,0,0,0,246,249,5,1,0,0,247,249,3,
+        26,13,0,248,246,1,0,0,0,248,247,1,0,0,0,249,31,1,0,0,0,27,34,36,
         46,57,62,72,85,97,101,114,125,133,139,148,154,157,165,167,172,179,
-        184,197,225,227,235,242,246
+        184,199,227,229,237,244,248
     ]
 
 class TyCParser ( Parser ):
@@ -1255,38 +1256,6 @@ class TyCParser ( Parser ):
 
 
 
-    class PostfixExprContext(ExprContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a TyCParser.ExprContext
-            super().__init__(parser)
-            self.copyFrom(ctx)
-
-        def expr(self):
-            return self.getTypedRuleContext(TyCParser.ExprContext,0)
-
-        def INCR(self):
-            return self.getToken(TyCParser.INCR, 0)
-        def DECR(self):
-            return self.getToken(TyCParser.DECR, 0)
-
-
-    class FuncCallContext(ExprContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a TyCParser.ExprContext
-            super().__init__(parser)
-            self.copyFrom(ctx)
-
-        def ID(self):
-            return self.getToken(TyCParser.ID, 0)
-        def LP(self):
-            return self.getToken(TyCParser.LP, 0)
-        def RP(self):
-            return self.getToken(TyCParser.RP, 0)
-        def exprList(self):
-            return self.getTypedRuleContext(TyCParser.ExprListContext,0)
-
-
-
     class IdExprContext(ExprContext):
 
         def __init__(self, parser, ctx:ParserRuleContext): # actually a TyCParser.ExprContext
@@ -1295,41 +1264,6 @@ class TyCParser ( Parser ):
 
         def ID(self):
             return self.getToken(TyCParser.ID, 0)
-
-
-    class MemberAccessContext(ExprContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a TyCParser.ExprContext
-            super().__init__(parser)
-            self.copyFrom(ctx)
-
-        def expr(self):
-            return self.getTypedRuleContext(TyCParser.ExprContext,0)
-
-        def DOT(self):
-            return self.getToken(TyCParser.DOT, 0)
-        def ID(self):
-            return self.getToken(TyCParser.ID, 0)
-
-
-    class IntLitExprContext(ExprContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a TyCParser.ExprContext
-            super().__init__(parser)
-            self.copyFrom(ctx)
-
-        def INTLIT(self):
-            return self.getToken(TyCParser.INTLIT, 0)
-
-
-    class FloatLitExprContext(ExprContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a TyCParser.ExprContext
-            super().__init__(parser)
-            self.copyFrom(ctx)
-
-        def FLOATLIT(self):
-            return self.getToken(TyCParser.FLOATLIT, 0)
 
 
     class StringLitExprContext(ExprContext):
@@ -1372,10 +1306,104 @@ class TyCParser ( Parser ):
             return self.getToken(TyCParser.SUB, 0)
         def ADD(self):
             return self.getToken(TyCParser.ADD, 0)
+
+
+    class PrefixExprContext(ExprContext):
+
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a TyCParser.ExprContext
+            super().__init__(parser)
+            self.copyFrom(ctx)
+
+        def expr(self):
+            return self.getTypedRuleContext(TyCParser.ExprContext,0)
+
         def INCR(self):
             return self.getToken(TyCParser.INCR, 0)
         def DECR(self):
             return self.getToken(TyCParser.DECR, 0)
+
+
+    class AssignExprContext(ExprContext):
+
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a TyCParser.ExprContext
+            super().__init__(parser)
+            self.copyFrom(ctx)
+
+        def expr(self, i:int=None):
+            if i is None:
+                return self.getTypedRuleContexts(TyCParser.ExprContext)
+            else:
+                return self.getTypedRuleContext(TyCParser.ExprContext,i)
+
+        def ASSIGN(self):
+            return self.getToken(TyCParser.ASSIGN, 0)
+
+
+    class PostfixExprContext(ExprContext):
+
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a TyCParser.ExprContext
+            super().__init__(parser)
+            self.copyFrom(ctx)
+
+        def expr(self):
+            return self.getTypedRuleContext(TyCParser.ExprContext,0)
+
+        def INCR(self):
+            return self.getToken(TyCParser.INCR, 0)
+        def DECR(self):
+            return self.getToken(TyCParser.DECR, 0)
+
+
+    class FuncCallContext(ExprContext):
+
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a TyCParser.ExprContext
+            super().__init__(parser)
+            self.copyFrom(ctx)
+
+        def ID(self):
+            return self.getToken(TyCParser.ID, 0)
+        def LP(self):
+            return self.getToken(TyCParser.LP, 0)
+        def RP(self):
+            return self.getToken(TyCParser.RP, 0)
+        def exprList(self):
+            return self.getTypedRuleContext(TyCParser.ExprListContext,0)
+
+
+
+    class MemberAccessContext(ExprContext):
+
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a TyCParser.ExprContext
+            super().__init__(parser)
+            self.copyFrom(ctx)
+
+        def expr(self):
+            return self.getTypedRuleContext(TyCParser.ExprContext,0)
+
+        def DOT(self):
+            return self.getToken(TyCParser.DOT, 0)
+        def ID(self):
+            return self.getToken(TyCParser.ID, 0)
+
+
+    class IntLitExprContext(ExprContext):
+
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a TyCParser.ExprContext
+            super().__init__(parser)
+            self.copyFrom(ctx)
+
+        def INTLIT(self):
+            return self.getToken(TyCParser.INTLIT, 0)
+
+
+    class FloatLitExprContext(ExprContext):
+
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a TyCParser.ExprContext
+            super().__init__(parser)
+            self.copyFrom(ctx)
+
+        def FLOATLIT(self):
+            return self.getToken(TyCParser.FLOATLIT, 0)
 
 
     class BinaryOpContext(ExprContext):
@@ -1418,22 +1446,6 @@ class TyCParser ( Parser ):
             return self.getToken(TyCParser.OR, 0)
 
 
-    class AssignExprContext(ExprContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a TyCParser.ExprContext
-            super().__init__(parser)
-            self.copyFrom(ctx)
-
-        def expr(self, i:int=None):
-            if i is None:
-                return self.getTypedRuleContexts(TyCParser.ExprContext)
-            else:
-                return self.getTypedRuleContext(TyCParser.ExprContext,i)
-
-        def ASSIGN(self):
-            return self.getToken(TyCParser.ASSIGN, 0)
-
-
 
     def expr(self, _p:int=0):
         _parentctx = self._ctx
@@ -1445,7 +1457,7 @@ class TyCParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 197
+            self.state = 199
             self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,21,self._ctx)
             if la_ == 1:
@@ -1532,23 +1544,38 @@ class TyCParser ( Parser ):
                 pass
 
             elif la_ == 8:
-                localctx = TyCParser.UnaryExprContext(self, localctx)
+                localctx = TyCParser.PrefixExprContext(self, localctx)
                 self._ctx = localctx
                 _prevctx = localctx
                 self.state = 195
                 _la = self._input.LA(1)
-                if not((((_la) & ~0x3f) == 0 and ((1 << _la) & 4420796416) != 0)):
+                if not(_la==23 or _la==24):
                     self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
                     self.consume()
                 self.state = 196
+                self.expr(9)
+                pass
+
+            elif la_ == 9:
+                localctx = TyCParser.UnaryExprContext(self, localctx)
+                self._ctx = localctx
+                _prevctx = localctx
+                self.state = 197
+                _la = self._input.LA(1)
+                if not((((_la) & ~0x3f) == 0 and ((1 << _la) & 4395630592) != 0)):
+                    self._errHandler.recoverInline(self)
+                else:
+                    self._errHandler.reportMatch(self)
+                    self.consume()
+                self.state = 198
                 self.expr(8)
                 pass
 
 
             self._ctx.stop = self._input.LT(-1)
-            self.state = 227
+            self.state = 229
             self._errHandler.sync(self)
             _alt = self._interp.adaptivePredict(self._input,23,self._ctx)
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
@@ -1556,141 +1583,141 @@ class TyCParser ( Parser ):
                     if self._parseListeners is not None:
                         self.triggerExitRuleEvent()
                     _prevctx = localctx
-                    self.state = 225
+                    self.state = 227
                     self._errHandler.sync(self)
                     la_ = self._interp.adaptivePredict(self._input,22,self._ctx)
                     if la_ == 1:
                         localctx = TyCParser.BinaryOpContext(self, TyCParser.ExprContext(self, _parentctx, _parentState))
                         self.pushNewRecursionContext(localctx, _startState, self.RULE_expr)
-                        self.state = 199
+                        self.state = 201
                         if not self.precpred(self._ctx, 7):
                             from antlr4.error.Errors import FailedPredicateException
                             raise FailedPredicateException(self, "self.precpred(self._ctx, 7)")
-                        self.state = 200
+                        self.state = 202
                         _la = self._input.LA(1)
                         if not((((_la) & ~0x3f) == 0 and ((1 << _la) & 939524096) != 0)):
                             self._errHandler.recoverInline(self)
                         else:
                             self._errHandler.reportMatch(self)
                             self.consume()
-                        self.state = 201
+                        self.state = 203
                         self.expr(8)
                         pass
 
                     elif la_ == 2:
                         localctx = TyCParser.BinaryOpContext(self, TyCParser.ExprContext(self, _parentctx, _parentState))
                         self.pushNewRecursionContext(localctx, _startState, self.RULE_expr)
-                        self.state = 202
+                        self.state = 204
                         if not self.precpred(self._ctx, 6):
                             from antlr4.error.Errors import FailedPredicateException
                             raise FailedPredicateException(self, "self.precpred(self._ctx, 6)")
-                        self.state = 203
+                        self.state = 205
                         _la = self._input.LA(1)
                         if not(_la==25 or _la==26):
                             self._errHandler.recoverInline(self)
                         else:
                             self._errHandler.reportMatch(self)
                             self.consume()
-                        self.state = 204
+                        self.state = 206
                         self.expr(7)
                         pass
 
                     elif la_ == 3:
                         localctx = TyCParser.BinaryOpContext(self, TyCParser.ExprContext(self, _parentctx, _parentState))
                         self.pushNewRecursionContext(localctx, _startState, self.RULE_expr)
-                        self.state = 205
+                        self.state = 207
                         if not self.precpred(self._ctx, 5):
                             from antlr4.error.Errors import FailedPredicateException
                             raise FailedPredicateException(self, "self.precpred(self._ctx, 5)")
-                        self.state = 206
+                        self.state = 208
                         _la = self._input.LA(1)
                         if not((((_la) & ~0x3f) == 0 and ((1 << _la) & 3222798336) != 0)):
                             self._errHandler.recoverInline(self)
                         else:
                             self._errHandler.reportMatch(self)
                             self.consume()
-                        self.state = 207
+                        self.state = 209
                         self.expr(6)
                         pass
 
                     elif la_ == 4:
                         localctx = TyCParser.BinaryOpContext(self, TyCParser.ExprContext(self, _parentctx, _parentState))
                         self.pushNewRecursionContext(localctx, _startState, self.RULE_expr)
-                        self.state = 208
+                        self.state = 210
                         if not self.precpred(self._ctx, 4):
                             from antlr4.error.Errors import FailedPredicateException
                             raise FailedPredicateException(self, "self.precpred(self._ctx, 4)")
-                        self.state = 209
+                        self.state = 211
                         _la = self._input.LA(1)
                         if not(_la==17 or _la==18):
                             self._errHandler.recoverInline(self)
                         else:
                             self._errHandler.reportMatch(self)
                             self.consume()
-                        self.state = 210
+                        self.state = 212
                         self.expr(5)
                         pass
 
                     elif la_ == 5:
                         localctx = TyCParser.BinaryOpContext(self, TyCParser.ExprContext(self, _parentctx, _parentState))
                         self.pushNewRecursionContext(localctx, _startState, self.RULE_expr)
-                        self.state = 211
+                        self.state = 213
                         if not self.precpred(self._ctx, 3):
                             from antlr4.error.Errors import FailedPredicateException
                             raise FailedPredicateException(self, "self.precpred(self._ctx, 3)")
-                        self.state = 212
+                        self.state = 214
                         self.match(TyCParser.AND)
-                        self.state = 213
+                        self.state = 215
                         self.expr(4)
                         pass
 
                     elif la_ == 6:
                         localctx = TyCParser.BinaryOpContext(self, TyCParser.ExprContext(self, _parentctx, _parentState))
                         self.pushNewRecursionContext(localctx, _startState, self.RULE_expr)
-                        self.state = 214
+                        self.state = 216
                         if not self.precpred(self._ctx, 2):
                             from antlr4.error.Errors import FailedPredicateException
                             raise FailedPredicateException(self, "self.precpred(self._ctx, 2)")
-                        self.state = 215
+                        self.state = 217
                         self.match(TyCParser.OR)
-                        self.state = 216
+                        self.state = 218
                         self.expr(3)
                         pass
 
                     elif la_ == 7:
                         localctx = TyCParser.AssignExprContext(self, TyCParser.ExprContext(self, _parentctx, _parentState))
                         self.pushNewRecursionContext(localctx, _startState, self.RULE_expr)
-                        self.state = 217
+                        self.state = 219
                         if not self.precpred(self._ctx, 1):
                             from antlr4.error.Errors import FailedPredicateException
                             raise FailedPredicateException(self, "self.precpred(self._ctx, 1)")
-                        self.state = 218
+                        self.state = 220
                         self.match(TyCParser.ASSIGN)
-                        self.state = 219
+                        self.state = 221
                         self.expr(1)
                         pass
 
                     elif la_ == 8:
                         localctx = TyCParser.MemberAccessContext(self, TyCParser.ExprContext(self, _parentctx, _parentState))
                         self.pushNewRecursionContext(localctx, _startState, self.RULE_expr)
-                        self.state = 220
-                        if not self.precpred(self._ctx, 10):
-                            from antlr4.error.Errors import FailedPredicateException
-                            raise FailedPredicateException(self, "self.precpred(self._ctx, 10)")
-                        self.state = 221
-                        self.match(TyCParser.DOT)
                         self.state = 222
+                        if not self.precpred(self._ctx, 11):
+                            from antlr4.error.Errors import FailedPredicateException
+                            raise FailedPredicateException(self, "self.precpred(self._ctx, 11)")
+                        self.state = 223
+                        self.match(TyCParser.DOT)
+                        self.state = 224
                         self.match(TyCParser.ID)
                         pass
 
                     elif la_ == 9:
                         localctx = TyCParser.PostfixExprContext(self, TyCParser.ExprContext(self, _parentctx, _parentState))
                         self.pushNewRecursionContext(localctx, _startState, self.RULE_expr)
-                        self.state = 223
-                        if not self.precpred(self._ctx, 9):
+                        self.state = 225
+                        if not self.precpred(self._ctx, 10):
                             from antlr4.error.Errors import FailedPredicateException
-                            raise FailedPredicateException(self, "self.precpred(self._ctx, 9)")
-                        self.state = 224
+                            raise FailedPredicateException(self, "self.precpred(self._ctx, 10)")
+                        self.state = 226
                         _la = self._input.LA(1)
                         if not(_la==23 or _la==24):
                             self._errHandler.recoverInline(self)
@@ -1700,7 +1727,7 @@ class TyCParser ( Parser ):
                         pass
 
              
-                self.state = 229
+                self.state = 231
                 self._errHandler.sync(self)
                 _alt = self._interp.adaptivePredict(self._input,23,self._ctx)
 
@@ -1746,17 +1773,17 @@ class TyCParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 230
+            self.state = 232
             self.expr(0)
-            self.state = 235
+            self.state = 237
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             while _la==40:
-                self.state = 231
+                self.state = 233
                 self.match(TyCParser.COMMA)
-                self.state = 232
+                self.state = 234
                 self.expr(0)
-                self.state = 237
+                self.state = 239
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
@@ -1801,7 +1828,7 @@ class TyCParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 238
+            self.state = 240
             _la = self._input.LA(1)
             if not((((_la) & ~0x3f) == 0 and ((1 << _la) & 35184372094080) != 0)):
                 self._errHandler.recoverInline(self)
@@ -1842,17 +1869,17 @@ class TyCParser ( Parser ):
         localctx = TyCParser.ReturnTypeContext(self, self._ctx, self.state)
         self.enterRule(localctx, 28, self.RULE_returnType)
         try:
-            self.state = 242
+            self.state = 244
             self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [15]:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 240
+                self.state = 242
                 self.match(TyCParser.VOID)
                 pass
             elif token in [7, 10, 12, 45]:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 241
+                self.state = 243
                 self.explicitType()
                 pass
             else:
@@ -1892,17 +1919,17 @@ class TyCParser ( Parser ):
         localctx = TyCParser.VarTypeContext(self, self._ctx, self.state)
         self.enterRule(localctx, 30, self.RULE_varType)
         try:
-            self.state = 246
+            self.state = 248
             self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [1]:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 244
+                self.state = 246
                 self.match(TyCParser.AUTO)
                 pass
             elif token in [7, 10, 12, 45]:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 245
+                self.state = 247
                 self.explicitType()
                 pass
             else:
@@ -1958,11 +1985,11 @@ class TyCParser ( Parser ):
          
 
             if predIndex == 7:
-                return self.precpred(self._ctx, 10)
+                return self.precpred(self._ctx, 11)
          
 
             if predIndex == 8:
-                return self.precpred(self._ctx, 9)
+                return self.precpred(self._ctx, 10)
          
 
 
