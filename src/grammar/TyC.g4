@@ -25,7 +25,41 @@ options{
 }
 
 // -- PARSER RULES --
-program: EOF;
+
+// Program Structure
+program: (structDecl | funcDecl)+ EOF;
+
+// Struct & Function Declarations
+structDecl: STRUCT ID LB memberDecl* RB SEMI;
+memberDecl: explicitType ID SEMI;
+
+funcDecl: returnType? ID LP paramList? RP blockStmt;
+paramList: param (COMMA param)*;
+param: explicitType ID;
+blockStmt: LB stmt* RB;
+
+// Statements
+stmt:
+	ifStmt			# ifStmt
+	| forStmt		# forStmt
+	| whileStmt		# whileStmt
+	| switchStmt	# switchStmt
+	| breakStmt		# breakStmt
+	| continueStmt	# continueStmt
+	| returnStmt	# returnStmt
+	| blockStmt		# blockStmt
+	| varDeclStmt	# varDeclStmt
+	| exprStmt		# exprStmt;
+
+varDeclStmt: varType ID (ASSIGN expr)? SEMI;
+
+// Expressions
+expr: 'expr'; // Placeholder for expression rules
+
+// Primitive Types
+explicitType: INT | FLOAT | STRING | ID;
+returnType: VOID | explicitType;
+varType: AUTO | explicitType;
 
 // -- LEXER RULES -- 
 
@@ -77,9 +111,13 @@ COMMA: ',';
 COLON: ':';
 
 // Literals
-INTLIT: [0-9]+;
-FLOATLIT: [0-9]+ '.' [0-9]+;
-STRINGLIT: '"' ( ~["\\\r\n] | '\\' .)* '"';
+FLOATLIT:
+	Digit+ '.' Digit* Exponent?
+	| '.' Digit+ Exponent?
+	| Digit+ Exponent;
+fragment Exponent: [eE] [+-]? Digit+;
+INTLIT: Digit+;
+STRLIT: '"' StrChar* '"' {self.text = self.text[1:-1]};
 
 // Identifiers
 ID: [a-zA-Z_] [a-zA-Z0-9_]*;
@@ -89,6 +127,13 @@ BLOCK_COMMENT: '/*' .*? '*/' -> skip;
 LINE_COMMENT: '//' ~[\r\n]* -> skip;
 WS: [ \t\f\r\n]+ -> skip; // skip whitespaces
 
+// Error handling rules
+ILLEGAL_ESCAPE:
+	'"' StrChar* '\\' ~[bfrnt"\\\r\n] {self.text = self.text[1:];};
+UNCLOSE_STRING: '"' StrChar* '\\'? {self.text = self.text[1:];};
 ERROR_CHAR: .;
-ILLEGAL_ESCAPE: .;
-UNCLOSE_STRING: .;
+
+// Fragments
+fragment Digit: [0-9];
+fragment EscapeSeq: '\\' [bfrnt"\\];
+fragment StrChar: EscapeSeq | ~["\\\r\n];
