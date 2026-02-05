@@ -27,7 +27,7 @@ options{
 // --- PARSER RULES ---
 
 // Program Structure
-program: (structDecl | funcDecl)+ EOF;
+program: (structDecl | funcDecl)* EOF;
 
 // Struct & Function Declarations
 structDecl: STRUCT ID LB memberDecl* RB SEMI;

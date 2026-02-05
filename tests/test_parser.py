@@ -1,18 +1,7 @@
-import sys
-import os
 import pytest
-
-# --- PATH SETUP ---
-project_root = os.path.dirname(os.path.abspath(__file__))
-build_dir = os.path.join(project_root, "build")
-sys.path.insert(0, project_root)
-sys.path.insert(0, build_dir)
-
 from tests.utils import Parser
 
-# ==============================================================================
-# 1. SPECIFICATION EXAMPLES (6 Tests)
-# ==============================================================================
+# --- 1. Specification Examples ---
 
 def test_spec_hello_world():
     src = 'void main() { printString("Hello, World!"); }'
@@ -71,9 +60,8 @@ def test_spec_variable_decl():
     """
     assert Parser(src).parse() == "success"
 
-# ==============================================================================
-# 2. STRUCT DECLARATIONS (12 Tests)
-# ==============================================================================
+# --- 2. Struct Declarations ---
+
 @pytest.mark.parametrize("src", [
     "struct Empty {};",
     "struct Point { int x; int y; };",
@@ -96,9 +84,8 @@ def test_struct_valid(src):
 def test_struct_invalid(src):
     assert Parser(src).parse() != "success"
 
-# ==============================================================================
-# 3. FUNCTION DECLARATIONS (12 Tests)
-# ==============================================================================
+# --- 3. Function Declarations ---
+
 @pytest.mark.parametrize("src", [
     "void f() {}",
     "int f() { return 1; }",
@@ -121,9 +108,8 @@ def test_func_valid(src):
 def test_func_invalid(src):
     assert Parser(src).parse() != "success"
 
-# ==============================================================================
-# 4. VARIABLE DECLARATIONS (18 Tests)
-# ==============================================================================
+# --- 4. Variable Declarations ---
+
 @pytest.mark.parametrize("stmt", [
     "int x;",
     "int x = 5;",
@@ -153,9 +139,7 @@ def test_var_decl_invalid(stmt):
     src = f"void main() {{ {stmt} }}"
     assert Parser(src).parse() != "success"
 
-# ==============================================================================
-# 5. CONTROL FLOW (30 Tests)
-# ==============================================================================
+# --- 5. Control Flow ---
 
 # IF Statements
 @pytest.mark.parametrize("stmt", [
@@ -204,7 +188,8 @@ def test_for_stmts(stmt):
     "switch(x) { case 1: a=1; break; case 2: a=2; }",
     "switch(x) { default: break; case 1: break; }",
     "switch(x) {}", 
-    "switch(x+1) { case (1+1): break; }"
+    "switch(x+1) { case (1+1): break; }",
+    "switch(x) { case 1: break; default: break; case 2: break; }"
 ])
 def test_switch_stmts(stmt):
     src = f"void main() {{ {stmt} }}"
@@ -217,10 +202,15 @@ def test_switch_stmts(stmt):
 def test_jump_stmts(stmt):
     src = f"void main() {{ {stmt} }}"
     assert Parser(src).parse() == "success"
+    
+# Nested Blocks
+def test_nested_blocks_deep():
+    """Test deeply nested empty blocks"""
+    src = "void main() { { { } { int x; } } }"
+    assert Parser(src).parse() == "success"
 
-# ==============================================================================
-# 6. EXPRESSIONS & PRECEDENCE (30 Tests)
-# ==============================================================================
+# --- 6. Expressions & Precedence ---
+
 @pytest.mark.parametrize("expr", [
     "a", "1", "1.0", "\"s\"", "a.b", "a.b.c",
     "a++", "a--", "-a", "+a", "!a", "++a", "--a",
@@ -255,9 +245,8 @@ def test_complex_precedence(expr):
     src = f"void main() {{ auto x = {expr}; }}"
     assert Parser(src).parse() == "success"
 
-# ==============================================================================
-# 7. STRUCT LITERALS (5 Tests)
-# ==============================================================================
+# --- 7. Struct Literals ---
+
 @pytest.mark.parametrize("expr", [
     "{1, 2}",
     "{{1, 2}, 3}",
@@ -269,9 +258,8 @@ def test_struct_literals(expr):
     src = f"void main() {{ auto x = {expr}; }}"
     assert Parser(src).parse() == "success"
 
-# ==============================================================================
-# 8. INTEGRATION / COMPLEX (5 Tests)
-# ==============================================================================
+# --- 8. Integration / Complex ---
+
 def test_complex_nesting():
     src = """
     void main() {
@@ -293,3 +281,7 @@ def test_complex_calc():
     }
     """
     assert Parser(src).parse() == "success"
+    
+def test_empty_program():
+    assert Parser("").parse() == "success"
+    assert Parser("// just comments").parse() == "success"
